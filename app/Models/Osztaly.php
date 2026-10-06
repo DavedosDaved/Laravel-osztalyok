@@ -12,7 +12,7 @@ class Osztaly extends Model
 
     protected $fillable = ['name'];
 
-    public function osztalyok()
+    public function diakok()
     {
         return $this->hasMany(Diak::class);
     }

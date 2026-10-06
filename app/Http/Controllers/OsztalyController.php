@@ -12,7 +12,7 @@ class OsztalyController extends Controller
      */
     public function index()
     {
-        $counties = Osztaly::get();
+        $osztalyok = Osztaly::get();
 
         return view('osztalyok.index', compact('osztalyok'));
     }
@@ -45,7 +45,7 @@ class OsztalyController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(County $county)
+    public function show(Osztaly $osztaly)
     {
         return view('osztalyok.show', compact('osztaly'));
     }
@@ -53,7 +53,7 @@ class OsztalyController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(County $county)
+    public function edit(Osztaly $osztaly)
     {
         return view('osztalyok.edit', compact('osztaly'));
     }

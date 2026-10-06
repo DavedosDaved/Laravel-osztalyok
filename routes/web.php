@@ -17,9 +17,6 @@ Route::get('/osztalyok/create', [OsztalyController::class, 'create'])
 Route::post('/osztalyok', [OsztalyController::class, 'store'])
     ->name('osztalyok.store');
 
-Route::get('/osztalyok/{osztaly}', [OsztalyController::class, 'show'])
-    ->name('osztalyok.show');
-
 Route::get('/osztalyok/{osztaly}/edit', [OsztalyController::class, 'edit'])
     ->name('osztalyok.edit');
 
@@ -39,14 +36,11 @@ Route::get('/diakok/create', [DiakController::class, 'create'])
 Route::post('/diakok', [DiakController::class, 'store'])
     ->name('diakok.store');
 
-Route::get('/diakok/{osztaly}', [DiakController::class, 'show'])
-    ->name('diakok.show');
-
-Route::get('/diakok/{osztaly}/edit', [DiakController::class, 'edit'])
+Route::get('/diakok/{diak}/edit', [DiakController::class, 'edit'])
     ->name('diakok.edit');
 
-Route::patch('/diakok/{osztaly}', [DiakController::class, 'update'])
+Route::patch('/diakok/{diak}', [DiakController::class, 'update'])
     ->name('diakok.update');
 
-Route::delete('/diakok/{osztaly}', [DiakController::class, 'destroy'])
+Route::delete('/diakok/{diak}', [DiakController::class, 'destroy'])
     ->name('diakok.destroy');

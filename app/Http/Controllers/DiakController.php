@@ -43,7 +43,9 @@ class DiakController extends Controller
 
     public function edit(Diak $diak)
     {
-        return view('diakok.edit', compact('diak'));
+        $osztalyok = Osztaly::all();
+
+        return view('diakok.edit', compact('diak', 'osztalyok'));
     }
 
     public function update(Request $request, Diak $diak)
